@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; /* Нежный голубой фон */
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+
+.container {
+    text-align: center;
+    background-color: #f7f7f7; /* Белый фон для контейнера */
+    border-radius: 10px; /* Сглаженные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+    padding: 20px; /* Отступы внутри контейнера */
+    max-width: 400px; /* Максимальная ширина контейнера */
+}
+
+img {
+    width: 350px; /* Фиксированная ширина изображения */
+    height: auto; /* Сохраняет пропорции изображения */
+    border-radius: 10px; /* Сглаженные углы для изображения */
+    margin-bottom: 20px; /* Отступ между изображением и текстом */
+}
+
+h1 {
+    color: #00796b; /* Цвет заголовка */
+    margin: 10px 0; /* Отступы для заголовка */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #00796b; /* Цвет кнопки */
+    color: #f7f7f7; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Сглаженные углы для кнопки */
+    transition: background-color 0.3s; /* Плавный переход для фона кнопки */
+}
+
+button:hover {
+    background-color: #004d40; /* Цвет кнопки при наведении */
+}
