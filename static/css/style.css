@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: "Nunito";
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0f7fa; /* Нежный голубой фон */
+    background: linear-gradient(to right, #e2e2e2, #922e60); /* Нежный фон */
     font-family: 'Arial', sans-serif;
     margin: 0; /* Убираем отступы по умолчанию */
 }
@@ -12,7 +18,7 @@ body {
     text-align: center;
     background-color: #f7f7f7; /* Белый фон для контейнера */
     border-radius: 10px; /* Сглаженные углы */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+    box-shadow: 10px 0 50px black; /* Тень для контейнера */
     padding: 20px; /* Отступы внутри контейнера */
     max-width: 400px; /* Максимальная ширина контейнера */
 }
@@ -21,19 +27,21 @@ img {
     width: 350px; /* Фиксированная ширина изображения */
     height: auto; /* Сохраняет пропорции изображения */
     border-radius: 10px; /* Сглаженные углы для изображения */
-    margin-bottom: 20px; /* Отступ между изображением и текстом */
+    margin-bottom: 30px; /* Отступ между изображением и текстом */
 }
 
 h1 {
-    color: #00796b; /* Цвет заголовка */
+    line-height: 35px;
+    color: #922e60; /* Цвет заголовка */
     margin: 10px 0; /* Отступы для заголовка */
 }
 
 button {
+    margin-top: 30px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #00796b; /* Цвет кнопки */
+    background-color: #922e60; /* Цвет кнопки */
     color: #f7f7f7; /* Цвет текста кнопки */
     border: none; /* Убираем рамку */
     border-radius: 5px; /* Сглаженные углы для кнопки */
@@ -41,5 +49,5 @@ button {
 }
 
 button:hover {
-    background-color: #004d40; /* Цвет кнопки при наведении */
+    background-color: rgb(99, 16, 61); /* Цвет кнопки при наведении */
 }
