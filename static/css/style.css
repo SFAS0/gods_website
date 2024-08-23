@@ -15,7 +15,7 @@ body {
     margin: 0; /* Убираем отступы по умолчанию */
 }
 
-.container {
+#container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +25,9 @@ body {
     box-shadow: 10px 0 50px rgb(100, 100, 100); /* Тень для контейнера */
     padding: 20px; /* Отступы внутри контейнера */
     max-width: 400px; /* Максимальная ширина контейнера */
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 img {
@@ -39,6 +42,9 @@ h1 {
     line-height: 35px;
     color: #922e60; /* Цвет заголовка */
     margin: 10px 10px; /* Отступы для заголовка */
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 button {
