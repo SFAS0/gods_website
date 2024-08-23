@@ -18,7 +18,7 @@ body {
     text-align: center;
     background-color: #f7f7f7; /* Белый фон для контейнера */
     border-radius: 10px; /* Сглаженные углы */
-    box-shadow: 10px 0 50px black; /* Тень для контейнера */
+    box-shadow: 10px 0 50px rgb(100, 100, 100); /* Тень для контейнера */
     padding: 20px; /* Отступы внутри контейнера */
     max-width: 400px; /* Максимальная ширина контейнера */
 }
