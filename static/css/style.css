@@ -10,30 +10,41 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(to right, #e2e2e2, #922e60); /* Нежный фон */
+    background-repeat: no-repeat;
     font-family: 'Arial', sans-serif;
     margin: 0; /* Убираем отступы по умолчанию */
 }
 
-.container {
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     background-color: #f7f7f7; /* Белый фон для контейнера */
     border-radius: 10px; /* Сглаженные углы */
-    box-shadow: 10px 0 50px black; /* Тень для контейнера */
+    box-shadow: 10px 0 50px rgb(100, 100, 100); /* Тень для контейнера */
     padding: 20px; /* Отступы внутри контейнера */
     max-width: 400px; /* Максимальная ширина контейнера */
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 img {
-    width: 350px; /* Фиксированная ширина изображения */
+    max-width: 80%; /* Адаптивная ширина изображения */
     height: auto; /* Сохраняет пропорции изображения */
     border-radius: 10px; /* Сглаженные углы для изображения */
     margin-bottom: 30px; /* Отступ между изображением и текстом */
 }
 
 h1 {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
     line-height: 35px;
     color: #922e60; /* Цвет заголовка */
-    margin: 10px 0; /* Отступы для заголовка */
+    margin: 10px 10px; /* Отступы для заголовка */
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 button {

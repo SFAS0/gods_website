@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!-- Подключение стилей -->
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <img src="{{ url_for('static', filename='F6vMmrVZPbo.jpg') }}" alt="Описание изображения">
         <h1 id="prediction" style="display: none">{{ prediction }}</h1> <!--Предсказание не показывает-->
         <button id="button" onclick="getNewPrediction()">Получить новое предсказание</button>
     </div>
 
     <script>
+        window.onload = () => {
+            StartAnimation();
+        };
+
+        function StartAnimation() {
+            setTimeout(() => {
+                        document.getElementById('container').style.opacity = '1';
+                    }, 100);
+        }
+
         function getNewPrediction() {
             fetch('/new_prediction')
                 .then(response => response.json())
@@ -21,6 +31,12 @@
                     document.getElementById('prediction').innerText = data.prediction;
                     document.getElementById('prediction').style.display = 'block'; // Показать предсказание
                     document.getElementById('button').style.display = 'none'; // Скрыть кнопку
+                    document.getElementById('prediction').style.display = 'block'; // Показать предсказание
+                    document.getElementById('button').style.display = 'none'; // Скрыть кнопку
+
+                    setTimeout(() => {
+                        document.getElementById('prediction').style.opacity = '1';
+                    }, 100); // Задержка 100мс
                 });
         }
     </script>
