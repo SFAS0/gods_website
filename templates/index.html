@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <img src="{{ url_for('static', filename='F6vMmrVZPbo.jpg') }}" alt="Описание изображения">
-        <h1 id="prediction">{{ prediction }}</h1>
-        <button onclick="getNewPrediction()">Получить новое предсказание</button>
+        <h1 id="prediction" style="display: none">{{ prediction }}</h1> <!--Предсказание не показывает-->
+        <button id="button" onclick="getNewPrediction()">Получить новое предсказание</button>
     </div>
 
     <script>
@@ -19,6 +19,8 @@
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('prediction').innerText = data.prediction;
+                    document.getElementById('prediction').style.display = 'block'; // Показать предсказание
+                    document.getElementById('button').style.display = 'none'; // Скрыть кнопку
                 });
         }
     </script>
